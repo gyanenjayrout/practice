@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Budget Planner</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .navbar {
+      margin-bottom: 20px;
+    }
+
+    .card {
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      padding: 20px;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .header {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+    <div class="container">
+      <a class="navbar-brand header" href="#">Team Budget Planner</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add a Deal</h5>
+        <form id="budgetForm">
+          <div class="form-group">
+            <label for="dealName">Deal Name:</label>
+            <input type="text" class="form-control" id="dealName" required>
+            <div class="form-group">
+  <label for="vendor">Vendor:</label>
+  <input type="text" class="form-control" id="vendor" required>
+</div>
+
+          </div>
+          <div class="form-group">
+            <label for="budget">Deal Amount:</label>
+            <input type="number" class="form-control" id="budget" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Deal</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Budget Results</h5>
+        <ul id="dealList"></ul>
+        <div id="budgetInfo"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Team Budget Planner. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="dist/bundle.js"></script>
+</body>
+</html>
